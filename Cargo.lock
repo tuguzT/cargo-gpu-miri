@@ -65,6 +65,10 @@ dependencies = [
 ]
 
 [[package]]
+name = "simple_shader_builder_command"
+version = "0.0.0"
+
+[[package]]
 name = "spirv-std"
 version = "0.9.0"
 source = "git+https://github.com/Rust-GPU/rust-gpu?rev=f583740#f58374079a72ee1f73bf2a9bdaed435b5e44e20e"

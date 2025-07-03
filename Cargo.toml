@@ -1,6 +1,10 @@
 [workspace]
 resolver = "2"
-members = ["unsafe_abstraction", "simple_shader"]
+members = [
+    "unsafe_abstraction",
+    "simple_shader",
+    "simple_shader_builder_command",
+]
 
 [workspace.package]
 version = "0.0.0"
