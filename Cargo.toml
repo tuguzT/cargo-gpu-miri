@@ -4,6 +4,7 @@ members = [
     "unsafe_abstraction",
     "simple_shader",
     "simple_shader_builder_command",
+    "simple_shader_builder_api",
 ]
 
 [workspace.package]
