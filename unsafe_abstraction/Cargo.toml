@@ -1,0 +1,5 @@
+[package]
+name = "unsafe_abstraction"
+version.workspace = true
+edition.workspace = true
+publish.workspace = true

@@ -1,6 +1,16 @@
-[package]
-name = "cargo-gpu-miri"
-version = "0.1.0"
-edition = "2024"
+[workspace]
+resolver = "2"
+members = ["unsafe_abstraction", "simple_shader"]
 
-[dependencies]
+[workspace.package]
+version = "0.0.0"
+edition = "2021"
+publish = false
+
+[workspace.dependencies]
+cargo-gpu = { git = "https://github.com/Rust-GPU/cargo-gpu", rev = "e574460" }
+spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "f583740" }
+
+[workspace.lints.rust.unexpected_cfgs]
+level = "warn"
+check-cfg = ['cfg(target_arch, values("spirv"))']
