@@ -757,11 +757,15 @@ name = "simple_shader_builder_api"
 version = "0.0.0"
 dependencies = [
  "cargo-gpu",
+ "rspirv",
 ]
 
 [[package]]
 name = "simple_shader_builder_command"
 version = "0.0.0"
+dependencies = [
+ "rspirv",
+]
 
 [[package]]
 name = "smallvec"

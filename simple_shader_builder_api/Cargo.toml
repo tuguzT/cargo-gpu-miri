@@ -4,6 +4,9 @@ version.workspace = true
 edition.workspace = true
 publish.workspace = true
 
+[dependencies]
+rspirv = { workspace = true }
+
 [build-dependencies]
 cargo-gpu = { workspace = true }
 
