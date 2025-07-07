@@ -4,6 +4,9 @@ const SHADER_CRATE_NAME: &str = "simple_shader";
 const SHADER_CRATE_PATH: &str = "./../simple_shader";
 
 fn main() {
+    let random_int = unsafe { unsafe_abstraction::random_i32() };
+    println!("cargo::rustc-env=RANDOM_INT={random_int}");
+
     let out_dir = env::var("OUT_DIR").unwrap();
     let out_dir = path::absolute(out_dir).expect("failed to get absolute path");
     let shader_crate_path = path::absolute(SHADER_CRATE_PATH).expect("failed to get absolute path");

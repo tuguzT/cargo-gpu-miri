@@ -1,7 +1,8 @@
 # `cargo-gpu` & Miri
 
 This repository shows various issues with the usage of `cargo-gpu` if it was called with Miri (by `cargo miri run` or `cargo miri test` commands)
-Rust-GPU/cargo-gpu#93
+
+See Rust-GPU/cargo-gpu#93
 
 Workspace of the repository contains multiple crates:
 

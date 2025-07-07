@@ -6,6 +6,9 @@ const SHADER_CRATE_NAME: &str = "simple_shader";
 const SHADER_CRATE_PATH: &str = "./../simple_shader";
 
 fn main() -> Result<(), Box<dyn Error>> {
+    let random_int = unsafe { unsafe_abstraction::random_i32() };
+    println!("cargo::rustc-env=RANDOM_INT={random_int}");
+
     let backend_args = Install::from_shader_crate(SHADER_CRATE_PATH.into());
     let backend = backend_args.run()?;
 

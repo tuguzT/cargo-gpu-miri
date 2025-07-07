@@ -758,6 +758,7 @@ version = "0.0.0"
 dependencies = [
  "cargo-gpu",
  "rspirv",
+ "unsafe_abstraction",
 ]
 
 [[package]]
@@ -765,6 +766,7 @@ name = "simple_shader_builder_command"
 version = "0.0.0"
 dependencies = [
  "rspirv",
+ "unsafe_abstraction",
 ]
 
 [[package]]

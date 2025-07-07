@@ -13,6 +13,7 @@ edition = "2021"
 publish = false
 
 [workspace.dependencies]
+unsafe_abstraction = { path = "./unsafe_abstraction" }
 cargo-gpu = { git = "https://github.com/Rust-GPU/cargo-gpu", rev = "e574460" }
 spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "f583740" }
 rspirv = { version = "0.12" }
