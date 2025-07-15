@@ -10,6 +10,8 @@ rspirv = { workspace = true }
 [build-dependencies]
 unsafe_abstraction = { workspace = true }
 cargo-gpu = { workspace = true }
+log = { workspace = true }
+env_logger = { workspace = true }
 
 [lints]
 workspace = true
