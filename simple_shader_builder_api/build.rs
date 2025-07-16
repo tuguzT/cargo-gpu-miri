@@ -15,15 +15,17 @@ fn main() -> Result<(), Box<dyn Error>> {
     let random_int = unsafe { unsafe_abstraction::random_i32() };
     println!("cargo::rustc-env=RANDOM_INT={random_int}");
 
+    log::debug!("Installing backend for shader crate {SHADER_CRATE_NAME}...");
     let backend_args = Install::from_shader_crate(SHADER_CRATE_PATH.into());
     let backend = backend_args.run()?;
     log::debug!("Backend installed successfully:\n{backend:#?}");
 
+    log::debug!("Building SPIR-V for shader crate {SHADER_CRATE_NAME}...");
     let builder = backend
         .to_spirv_builder(SHADER_CRATE_PATH, "spirv-unknown-vulkan1.2")
         .spirv_metadata(SpirvMetadata::Full);
     let compile_result = builder.build()?;
-    log::debug!("Compilation result:\n{compile_result:#?}");
+    log::debug!("Build result:\n{compile_result:#?}");
 
     let shader_file_path = compile_result.module.unwrap_single().display();
     println!("cargo::rustc-env={SHADER_CRATE_NAME}.spv={shader_file_path}");
