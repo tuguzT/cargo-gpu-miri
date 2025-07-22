@@ -14,8 +14,8 @@ publish = false
 
 [workspace.dependencies]
 unsafe_abstraction = { path = "./unsafe_abstraction" }
-cargo-gpu = { git = "https://github.com/tuguzT/cargo-gpu", rev = "395f754" }
-spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "f5837407" }
+cargo-gpu = { git = "https://github.com/Rust-GPU/cargo-gpu", rev = "98931f8b9aa7471c3f0691f87174f4b478d86bc8" }
+spirv-std = { git = "https://github.com/Rust-GPU/rust-gpu", rev = "3e89e6cc7b32b51db51d75b5f558ccd7ecf5b850" }
 rspirv = { version = "0.12" }
 log = { version = "0.4" }
 env_logger = { version = "0.11" }
